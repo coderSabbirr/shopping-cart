@@ -2,28 +2,99 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
-.search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
+
+.serach-box form {
+  width: 80%;
+ margin-left: 30%;
+  max-width: 700px;
+  margin-top:100px;
 }
-.search-field:hover {
-  outline: none;
-  border: none;
+
+.serach-box form .inner-form {
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 34px;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
-.search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 50px;
-  border-right: none;
+
+.serach-box form .inner-form .input-field {
+  height: 68px;
 }
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
+
+.serach-box form .inner-form .input-field input {
+  height: 100%;
+  background: transparent;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.serach-box form .inner-form .input-field input.placeholder {
+  color: #222;
+  font-size: 16px;
+}
+
+.serach-box form .inner-form .input-field input:-moz-placeholder {
+  color: #222;
+  font-size: 16px;
+}
+
+.serach-box form .inner-form .input-field input:hover,
+.serach-box form .inner-form .input-field input:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+.serach-box form .inner-form .input-field.first-wrap {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  background: #d9f1e3;
+}
+
+
+
+.serach-box form .inner-form .input-field.first-wrap .svg-wrapper {
+  min-width: 80px;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+
+.serach-box form .inner-form .input-field.second-wrap {
+  min-width: 216px;
+}
+
+.serach-box form .inner-form .input-field.second-wrap .btn-search {
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  background: #00ad5f;
+  transition: all .2s ease-out, color .2s ease-out;
+  font-weight: 300;
+}
+
+.serach-box form .inner-form .input-field.second-wrap .btn-search:hover {
+  background: #009451;
 }
 #all-products {
   display: grid;
@@ -42,7 +113,7 @@ body {
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
-  border: 1px solid cyan;
+  border: 1px solid rgb(0, 255, 149);
 }
 .product-image {
   width: 150px;

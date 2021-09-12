@@ -1,5 +1,5 @@
 const loadProducts = () => {
-  const url = `https://fakestoreapi.com/products`;
+  const url = `https://raw.githubusercontent.com/ProgrammingHero1/ranga-store-api/main/ranga-api.json`
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
@@ -21,10 +21,10 @@ const showProducts = (products) => {
     <img class="product-image" src=${image}></img>
       </div>
       <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <h5>Total-Rating : ${count}   </h5>
-      <h6>Average-rating: ${rate}</h6>
+      <p>Category: ${product.category} </p>
+      <h2>Price: $ ${product.price} </h2>
+      <h5>Total-Rating : ${count}  </h5>
+      <h6>Average-rating: ${rate} </h6>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" onclick='showDetails(${product.price},${rate})' class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button></div>
       `;
@@ -32,10 +32,7 @@ const showProducts = (products) => {
   }
 };
 
-const showDetails=(price,rating)=>{
-
-
-// const x= Array.from(Array(parseInt(rating)).keys()).map((r) =>'<i class="bi bi-star-fill text-warning"></i>' )
+const showDetails =(price,rating)=>{
 
 
 document.getElementById("modal-body").innerHTML = `
