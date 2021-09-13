@@ -1,3 +1,5 @@
+
+// api
 const loadProducts = () => {
   const url = `https://raw.githubusercontent.com/ProgrammingHero1/ranga-store-api/main/ranga-api.json`
   fetch(url)
@@ -16,7 +18,7 @@ const showProducts = (products) => {
       
     const div = document.createElement("div");
     div.classList.add("product");
-    
+    // single product
     div.innerHTML = `<div class="single-product card">
       <div>
       <img class="product-image" src=${image}></img>
@@ -37,6 +39,7 @@ const showProducts = (products) => {
 };
 
 
+//  total rating
 
 let count = 0;
 const addToCart = (id, price) => {
