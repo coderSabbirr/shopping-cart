@@ -150,7 +150,9 @@ body {
   padding-right: 30px;
 }
 .total-raring {
-  font-size: 18px;
+  font-size: 15px;
+  color: hsl(190, 75%, 41%);
+  margin-left: 10px;
 }
 .average-raring{
 font-size: 16px;

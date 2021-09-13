@@ -26,8 +26,8 @@ const showProducts = (products) => {
       <h3>${product.title}</h3>
       <p>Category: ${product.category} </p>
       <h2>Price: $ ${product.price} </h2>
-      <p class="total-raring">Total-Rating : ${count}  </p>
-      <p class="average-raring">${customerRating(rate)}</p>
+     
+      <p class="average-raring">${customerRating(rate)}  <span class="total-raring">  ${count}  Ratings</span></p>
       <div class="card-footer">
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="add-card ">Add to cart</button>
       <button id="details-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button></div>
@@ -39,11 +39,11 @@ const showProducts = (products) => {
   }
 };
 
-
+// customar rating 
 function customerRating(rate) {
   const rating= parseInt(rate)
   if(rating == 5){
-    const text =`Average-rating:
+    const text =`
     <i class="fas rating fa-star"></i>
     <i class="fas rating fa-star"></i>
     <i class="fas rating fa-star"></i>
@@ -52,7 +52,7 @@ function customerRating(rate) {
     return text;
   }
   else if  (rating == 4){
-    const text =`Average-rating:
+    const text =`
     <i class="fas rating fa-star"></i>
     <i class="fas rating fa-star"></i>
     <i class="fas rating fa-star"></i>
@@ -64,7 +64,7 @@ function customerRating(rate) {
   }
   else if (rating == 3){
     
-    const text =`Average-rating:
+    const text =`
     <i class="fas rating fa-star"></i>
     <i class="fas rating fa-star"></i>
     <i class="fas rating fa-star"></i>
@@ -75,7 +75,7 @@ function customerRating(rate) {
     return text;
   }
   else if(rating == 2){
-    const text =`Average-rating:
+    const text =`
     <i class="fas rating fa-star"></i>
     <i class="fas rating fa-star"></i>
     <i class="far no_rating fa-star"></i>
@@ -86,7 +86,7 @@ function customerRating(rate) {
     return text;
   }
   else if(rating == 1){
-    const text =`Average-rating:
+    const text =`
     <i class="fas rating fa-star"></i>
     <i class="far no_rating fa-star"></i>
     <i class="far no_rating fa-star"></i>
