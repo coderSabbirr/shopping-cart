@@ -25,9 +25,9 @@ const showProducts = (products) => {
       <p>Category: ${product.category} </p>
       <h2>Price: $ ${product.price} </h2>
       <h5>Total-Rating : ${count}  </h5>
-      <h6>Average-rating: ${rate} </h6>
+      <h6>Average-rating:${rate}</h6>
       <div class="card-footer">
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now ">Add to cart</button>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="add-card ">Add to cart</button>
       <button id="details-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button></div>
   
     </div>
