@@ -26,8 +26,8 @@ const showProducts = (products) => {
       <h3>${product.title}</h3>
       <p>Category: ${product.category} </p>
       <h2>Price: $ ${product.price} </h2>
-      <h5>Total-Rating : ${count}  </h5>
-      <h6>Average-rating:${rate}</h6>
+      <p class="total-raring">Total-Rating : ${count}  </p>
+      <p class="average-raring">${customerRating(rate)}</p>
       <div class="card-footer">
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="add-card ">Add to cart</button>
       <button id="details-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button></div>
@@ -35,10 +35,82 @@ const showProducts = (products) => {
     </div>
       `;
     document.getElementById("all-products").appendChild(div);
+    
   }
 };
 
 
+function customerRating(rate) {
+  const rating= parseInt(rate)
+  if(rating == 5){
+    const text =`Average-rating:
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    `
+    return text;
+  }
+  else if  (rating == 4){
+    const text =`Average-rating:
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    <i class="far no_rating fa-star"></i> 
+    `
+    return text;
+    
+  }
+  else if (rating == 3){
+    
+    const text =`Average-rating:
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    
+    `
+    return text;
+  }
+  else if(rating == 2){
+    const text =`Average-rating:
+    <i class="fas rating fa-star"></i>
+    <i class="fas rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    
+    `
+    return text;
+  }
+  else if(rating == 1){
+    const text =`Average-rating:
+    <i class="fas rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    
+    `
+    return text;
+  }
+  else {
+    console.log('no star');
+    const text =`
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far no_rating fa-star"></i>
+    <i class="far fa-star"></i>
+    
+    `
+    return text;
+  }
+
+}
+  
 //  total rating
 
 let count = 0;
